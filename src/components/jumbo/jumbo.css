@@ -1,0 +1,166 @@
+:root {
+	--swiggy_color: #fc8019;
+}
+
+.container {
+	display: flex;
+	height: 70vh;
+	min-height: 340px;
+	min-width: 280px;
+}
+.first_div {
+	width: 55vw;
+	padding: 5% 3% 0 6%;
+}
+nav {
+	display: flex;
+}
+nav .logo_container {
+	flex: 3;
+}
+#loginBtn {
+	border: none;
+	background: #fff;
+	flex: 1;
+}
+#signupBtn {
+	border: none;
+	background: #000;
+	color: #fff;
+	flex: 1;
+}
+.commonBtns {
+	height: 3.2rem;
+	padding: 0.3rem 1rem;
+	font-size: 18px;
+	font-weight: 600;
+}
+.first_div h1 {
+	font-size: 36px;
+	margin-top: 2rem;
+	margin-bottom: 16px;
+}
+.first_div h3 {
+	font-size: 24px;
+	font-weight: 300;
+	margin-bottom: 12px;
+	letter-spacing: 3px;
+	font-size: 18px;
+	font-weight: 300;
+	color: #686b78;
+	line-height: 40px;
+}
+.second_div {
+	width: 45vw;
+	background: url("./food.jpeg");
+	background-size: cover;
+}
+.searchDiv {
+	height: 58px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding-top: 0;
+	margin-bottom: 32px;
+	border: 1px solid var(--swiggy_color);
+}
+.searchDiv input {
+	height: 100%;
+	flex: 2;
+	border: none;
+	padding-left: 3rem;
+	font-size: 17px;
+	display: block;
+}
+#locateBtn {
+	height: 100%;
+	border: none;
+	flex: 1;
+	background: none;
+	display: block;
+	background-color: #fff;
+}
+#findBtn {
+	height: calc(100% + 1px);
+	border: none;
+	background-color: var(--swiggy_color);
+	color: #fff;
+	flex: 1;
+	font-size: 17px;
+	font-weight: 700;
+	display: block;
+}
+.first_div p {
+	color: #a9abb2;
+	letter-spacing: 2px;
+}
+#city-head {
+	margin-bottom: 16px;
+}
+p span {
+	color: #686b78;
+}
+.logo_container img:hover {
+	filter: drop-shadow(0px 0px 6px #eec6a6);
+}
+
+@media screen and (max-width: 992px) {
+	.first_div {
+		width: 50vw;
+	}
+
+	.commonBtns {
+		height: 2.2rem;
+		padding: 0.3rem;
+		font-size: 14px;
+	}
+	.first_div h1 {
+		font-size: 28px;
+		margin-top: 1.5rem;
+		margin-bottom: 12px;
+	}
+	.first_div h3 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.searchDiv {
+		height: 48px;
+	}
+	.searchDiv input {
+		padding-left: 1rem;
+		font-size: 75%;
+	}
+	#locateBtn {
+		font-size: 75%;
+	}
+	#findBtn {
+		font-size: 75%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		display: flex;
+		height: 60vh;
+		min-height: 340px;
+	}
+	.logo_container img {
+		height: 100%;
+		width: 50%;
+		min-width: 130px;
+	}
+	.first_div {
+		width: 100vw;
+		color: white !important;
+		background-image: url("./food.jpeg");
+	}
+	.first_div h3 {
+		color: #fff;
+	}
+	.second_div {
+		display: none;
+	}
+	p span {
+		color: white;
+	}
+}
