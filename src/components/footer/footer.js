@@ -3,12 +3,29 @@ import React from "react";
 import google from "../restaurant/googleplay.webp";
 import appstore from "../restaurant/appstore.webp";
 import swiggy from "./swiggywhite.png";
-import cities from "./cities";
+// import cities from "./cities";
+import result from "./cities";
 import { FaFacebookF } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 
+function myFunc(){
+	return result.map(currentList => {
+		return (
+			<div className={`row`}>
+				{currentList.map(currentCity => {
+					// eslint-disable-next-line
+					return (
+						<div>
+							<a href="/">{currentCity}</a>
+						</div>
+					);
+				})}
+			</div>
+		);
+	});
+}
 function Footer() {
 	return (
 		<footer>
@@ -18,10 +35,7 @@ function Footer() {
 			<div id="cities">
 				<h4>WE DELIVER TO</h4>
 				<div className="flexed_cities">
-					{cities.map(currentCity => {
-						// eslint-disable-next-line
-						return (<div><a href="#">{currentCity}</a></div>);
-					})}
+					{ myFunc() }
 				</div>
 			</div>
 			<hr />
